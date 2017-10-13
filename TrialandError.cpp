@@ -16,8 +16,10 @@ private:
     string streetName;
     double price;
 public:
+    // Constructor with no arguments
     houseInfo() : streetNum(0), price(0)
     {}
+    // Get house info from user
     void houseInput()
     {
         cout << "Please enter the street number: " << endl;
@@ -31,10 +33,11 @@ public:
         cin >> price;
         cin.ignore();
     }
+    // Display house info to user
     void showHouse(int houseNum)
     {
         cout << "House " << houseNum << " at " << streetNum
-             << " " << streetName << " for $" << price << ".00." << endl;
+             << " " << streetName << " for $" << price << "." << endl;
     }
     double returnPrice()
     {
@@ -68,8 +71,11 @@ int main()
     array[2].showHouse(3);
 
     cout << "\nYou should buy: ";
+
+
     int comparison = comparePrices(array);
 
+    // Print cheapest house(s)
     switch(comparison)
     {
         case 1:
